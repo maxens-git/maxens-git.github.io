@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DNS Profile Creator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <script src="js/FileSaver.min.js"></script>
+    <script src="js/uuidv4.min.js"></script>
+    <script src="js/finalize.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#8bc4ff">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="w3-container">
+    <h1>Secure DNS profile creator</h1>
+    <h2>For iOS 14 or later and macOS Big Sur or later</h2>
+
+    <div class="w3-bar w3-border bar-color">
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile">About</a>
+        <a href="tool.html" class="w3-bar-item w3-button w3-mobile">Tool</a>
+        <a href="finalize.html" class="w3-bar-item w3-button w3-mobile w3-green">Finalize</a>
+        <a href="https://github.com/fyr77/dns-mobileconfig" class="w3-bar-item w3-button w3-right w3-black w3-mobile">GitHub</a>
+        <a href="legal.html" class="w3-bar-item w3-button w3-right w3-black w3-mobile">Legal</a>
+        <a href="https://encrypted-dns.party/" target="_blank" class="w3-bar-item w3-button w3-right w3-blue-grey w3-mobile">Encrypted DNS Party</a>
+    </div>
+    <br>
+    <div id="dynamicList"></div>
+    <br>
+    <div class="w3-bar">
+        <button id="downloadBtn" class="w3-button w3-bar-item w3-mobile w3-green" style="width:80%" onclick="saveDynamicDataToFile()" disabled>Download Profile</button>
+        <button class="w3-button w3-bar-item w3-mobile w3-dark-gray" style="width:20%" onclick="confirmDel()">Delete All</button>
+    </div>
+</body>
+
+</html>
